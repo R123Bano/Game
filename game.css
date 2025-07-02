@@ -6,6 +6,9 @@
 body {
   overflow-x: hidden;
 }
+html, body {
+  height: 100%;
+}
 
 .heading {
     background-color: rgb(1, 1, 26);
