@@ -259,6 +259,7 @@ p {
     }
 }
 @media screen and (max-height: 700px){
+    @media screen and (min-width: 380px){
      .photos {
         display: flex;
         justify-content: center;
@@ -332,5 +333,6 @@ p {
     #msg-content {
     font-size: 1.5rem;
     margin-top:1rem;
+}
 }
 }
