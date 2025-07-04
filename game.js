@@ -2,6 +2,7 @@ let stone=document.querySelector("#stone");
 let paper=document.querySelector("#paper");
 let scissor=document.querySelector("#scissor");
 let msg=document.querySelector("#msg-content");
+let msgDiv=document.querySelector(".msg");
 let x=document.querySelector("#user_score");
 let userScore=0;
 let y=document.querySelector("#comp_score");
@@ -51,18 +52,24 @@ const playGame=(userChoice)=>{
     if(userChoice===computer){
         msg.innerText="Oops! Game was drawn Play again! ";
         console.log("Oops! Game was drawn Play again!");
+        msg.style.backgroundColor="rgb(153, 217, 234)";
+        msg.style.color="black";
     }else if((userChoice==="stone" && computer==="scissor") || 
               (userChoice==="paper" && computer==="stone") || 
               (userChoice==="scissor" && computer==="paper")){
         userScore++;
         x.innerText=userScore;
         msg.innerText=`${userChoice} beats ${computer}. You win!`;
+        msg.style.backgroundColor="green";
+        msg.style.color="white";
         console.log(`${userChoice} beats ${computer}. You win!`);
         console.log(`User Score: ${userScore}, Computer Score: ${computerScore}`);
     }else{
         computerScore++;
         y.innerText=computerScore;
         msg.innerText=`${computer} beats ${userChoice}. You lose!`;
+        msg.style.backgroundColor="red";
+        msg.style.color="white";
         console.log(`${computer} beats ${userChoice}. You lose!`);
         console.log(`User Score: ${userScore}, Computer Score: ${computerScore}`);
 
